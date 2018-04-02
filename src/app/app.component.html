@@ -1,0 +1,15 @@
+<div>
+    <li *ngFor="let hero of jsondata">
+      {{hero._id}}
+    </li>
+</div>
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="1000"
+  (scrolled)="onScroll()">
+</div>
+<div *ngIf="!finished">
+  Loading more movies...
+</div>
+
